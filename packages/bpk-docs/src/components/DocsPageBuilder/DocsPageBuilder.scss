@@ -25,4 +25,17 @@
   &--odd-sections {
     background-color: $bpk-color-gray-50;
   }
+
+  &__page-head {
+    &--with-swicher {
+      padding-right: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+
+      > * {
+        padding-right: $bpk-spacing-xs * 10;
+        padding-left: $bpk-spacing-xs * 10;
+      }
+    }
+  }
 }

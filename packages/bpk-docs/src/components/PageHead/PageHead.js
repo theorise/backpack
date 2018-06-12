@@ -49,11 +49,14 @@ type Props = {
   blurb: string | Node,
   wrapped: boolean,
   menu: ?Array<MenuItem>,
+  children: ?Node,
+  className: ?string,
 };
 const PageHead = (props: Props) => {
   const contentClassNames = getClassName(
     'bpkdocs-page-head__content',
     props.wrapped && 'bpkdocs-page-head__content--wrapped',
+    props.className,
   );
   const showMenu = props.menu && props.menu.length > 0;
   return (
@@ -80,6 +83,7 @@ const PageHead = (props: Props) => {
             </BpkList>
           </div>
         )}
+        {props.children}
       </div>
     </section>
   );
